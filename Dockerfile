@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 RUN apt-get update && apt-get install -y npm git supervisor
 RUN apt-get install tor
+RUN apt-get install vim
 COPY supervisord.conf /etc/supervisor/conf.d/supervisords.conf
 WORKDIR /app
 COPY app .
