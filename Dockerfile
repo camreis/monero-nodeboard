@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 RUN apt-get update && apt-get install -y npm git supervisor
+RUN apt-get install torrc
 COPY supervisord.conf /etc/supervisor/conf.d/supervisords.conf
 WORKDIR /app
 COPY app .
